@@ -1,0 +1,6 @@
+---
+# defaults file for oracle-java
+#
+java_home: "/usr/java"
+java_version: "jdk1.8.0_241"
+java_link: "/usr/bin/java"

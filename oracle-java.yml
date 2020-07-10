@@ -1,0 +1,9 @@
+---
+
+- name: Install Oracle Java JDK
+  hosts: example.myhost.com
+  gather_facts: no
+  become: yes
+  
+  roles: 
+    - oracle-java

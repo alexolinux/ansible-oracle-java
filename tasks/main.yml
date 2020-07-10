@@ -1,0 +1,33 @@
+---
+# tasks file for oracle-java
+#
+#
+
+- name: create java directory
+  file:
+    path: '{{ java_home }}'
+    state: directory
+    mode: '0755'
+  tags: [ create_dir ]
+
+- name: Extract java tarball into JAVA_HOME
+  unarchive:
+    src: '{{ java_package }}'
+    dest: '{{ java_home }}'
+  tags: [ extract_package ]
+
+# Environment setup.
+- name: Set JAVA_HOME if configured.
+  template:
+    src: java_home.sh.j2
+    dest: /etc/profile.d/java_home.sh
+    mode: 0644
+  when: java_home is defined and java_home
+  tags: [ set_env ]
+
+- name: Create symbolic link
+  file:
+    src: '{{ java_home }}/{{ java_version }}/bin/java'
+    dest: '{{ java_link }}'
+    state: link
+  tags: [ set_link ]

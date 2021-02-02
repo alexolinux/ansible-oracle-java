@@ -30,7 +30,7 @@ Playbook example
 
     - hosts: servers
       roles:
-         - { role: oracle-java }
+         - role: oracle-java
 
 
 Author Information

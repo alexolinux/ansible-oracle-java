@@ -1,5 +1,5 @@
 ---
 # vars file for oracle-java
 #
-java_package_version: jdk-8u241
+java_package_version: jdk-8u271
 java_package: '{{ java_package_version }}-linux-x64.tar.gz'

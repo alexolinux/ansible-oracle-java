@@ -2,11 +2,14 @@ Role oracle-java
 =========
 
 This role installs oracle java JDK from tarball.
+This proposal is an alternative to install Oracle java JDK (unlike default SO OpenJDK). 
 
 Requirements
 ------------
 
 You must download the tarball package from Oracle Download (Java SE Downloads) and put inside 'files' folder.
+Note: Previously was possible to automatic download by curl, however until this moment to get the tarball package, only with 'log in by Oracle SSO'. 
+It was necessary changes in this repository to still work (making tarball download).
 
 Role Variables
 --------------

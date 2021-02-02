@@ -1,8 +1,8 @@
 Role oracle-java
 =========
 
-This role installs oracle java JDK from tarball.
-This proposal is an alternative to install Oracle java JDK (unlike default SO OpenJDK). 
+This role installs oracle java JDK from the tarball. 
+This proposal is an alternative to install Oracle Java JDK (unlike the default SO OpenJDK)
 
 Requirements
 ------------

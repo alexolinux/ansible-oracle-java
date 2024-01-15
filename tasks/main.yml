@@ -29,12 +29,3 @@
     dest: '{{ java_link }}'
     state: link
   tags: [ set_link ]
-
-- name: Display Java Version
-  command: 'java -version'
-  register: java_version_output
-  tags: [ display_java_version ]
-
-- debug:
-    var: java_version_output.stdout_lines
-  tags: [ display_java_version ]

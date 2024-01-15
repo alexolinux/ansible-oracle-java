@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- hosts: web-hosts
   remote_user: root
+  become: yes
   roles:
-    - oracle-java
+    - ansible-oracle-java

@@ -16,14 +16,13 @@ Role Variables
 
 defaults/main.yml
 
-    java_home: "/usr/java"          <-- Location where the package will be extract.
-    java_version: "jdk1.8.0_241"    <-- Oracle Java JDK Version uncompressed.
+    java_home: "/usr/local/java"          <-- Location where the package will be extract.
     java_link: "/usr/bin/java"      <-- Symlink from java bin (it is necessary if you want install jenkins, for instance.
 
 vars/main.yml
 
-    java_package_version: jdk-8u241 <-- Package version string in tarball package.
-    java_package: '{{ java_package_version }}-linux-x64.tar.gz' <-- Full name of tarball package.
+    java_version: jdk-11.0.20 <-- Package version string in tarball package.
+    java_package: '{{ java_version }}-linux-x64.tar.gz' <-- Java Package extended name.
 
 
 Example Playbook
@@ -33,7 +32,7 @@ Playbook example
 
     - hosts: servers
       roles:
-         - role: oracle-java
+         - role: ansible-oracle-java
 
 
 Author Information

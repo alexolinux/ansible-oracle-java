@@ -22,7 +22,7 @@ defaults/main.yml
 vars/main.yml
 
     java_version: jdk-11.0.20 <-- Package version string in tarball package.
-    java_package: '{{ java_version }}-linux-x64.tar.gz' <-- Java Package extended name.
+    java_package: '{{ java_version }}_linux-x64_bin' <-- Java Package extended name (current Oracle standard folder name).
 
 
 Example Playbook

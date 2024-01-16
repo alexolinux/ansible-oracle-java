@@ -2,5 +2,5 @@
 # vars file for oracle-java
 # i.e. jdk-11.0.20_linux-x64_bin.tar.gz
 
-java_version: jdk-11.0.20
+java_version: jdk-17.0.9
 java_package: '{{ java_version }}_linux-x64_bin'
